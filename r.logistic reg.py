@@ -1,6 +1,5 @@
 #logistic regression
-# Data Preprocessing Template
-
+# Data Preprocessing 
 # Importing the libraries
 import numpy as np
 import matplotlib.pyplot as plt
@@ -33,8 +32,7 @@ classifier.fit(x_train, y_train)
 y_pred = classifier.predict(x_test)    #vector of predictions-of each of test set observation
 
 # making the confusion matrix
-from sklearn.metrics import confusion_matrix #its not a class,its a function
-                                           #(class is in capital letter at the beginning of words)
+from sklearn.metrics import confusion_matrix 
 cm = confusion_matrix(y_test, y_pred)                                           
 cm
 
@@ -68,14 +66,7 @@ plt.ylim(x2.min(), x2.max())
 for i,j in enumerate(np.unique(y_set)):
     plt.scatter(x_set[y_set == j, 0], x_set[y_set == j, 1],
                 c = ListedColormap(('red', 'green'))(i), label = j) #c is a parameter for colour;The method ListedColormap() provides computer codes
-                       #for coloring. First 3 entries are for  RGB and the last entry stands for transparency.
-                                                    #eg:from matplotlib.colors import ListedColormap
-                                                     #i=0
-                                                     #ListedColormap(('red', 'green'))(i)
-                                              #output:(1.0, 0.0, 0.0, 1.0)
-                                                     #i=1                                                  
-                                                     #ListedColormap(('red', 'green'))(i)
-                                              #output:(0.0, 0.50196078431372548, 0.0, 1.0)"""
+                       #for coloring. First 3 entries are for  RGB and the last entry stands for transparency.                                           
 plt.title('logistic regression(test set)')
 plt.xlabel('age')
 plt.ylabel('estimated salary')
